@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil - Arya Saputra</title>
+    <title>Home - Arya Saputra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="profil.html" class="nav-link">Profil</a>
-                <a href="project.html" class="nav-link">Project</a>
+                <a href="latihan.html" class="nav-link">Latihan</a>
                 <a href="galery.html" class="nav-link">Gallery</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="kontak.html" class="nav-link">Kontak</a>
@@ -25,75 +25,108 @@
 
     <main class="main">
         <div class="container">
-            <div class="page-header">
-                <h1>Profil Saya</h1>
-                <p>Get to know me better</p>
-            </div>
+            <section class="hero">
+                <h1>Halo! <br>Saya <span class="text-primary">Arya Saputra</span></h1>
+                <p class="typing-container">
+                    <span class="typing-text">Mahasiswa Teknik Informatika & Web Developer</span>
+                </p>
+                <p>Passionate tentang web development, programming, dan menciptakan pengalaman digital yang menarik</p>
+                <div class="hero-actions">
+                    <a href="latihan.html" class="btn btn-primary">
+                        <span>🚀 Lihat Latihan</span>
+                    </a>
+                    <a href="kontak.html" class="btn btn-secondary">
+                        <span>💬 Hubungi Saya</span>
+                    </a>
+                    <a href="profil.html" class="btn btn-secondary">
+                        <span>👨‍💻 Profil Saya</span>
+                    </a>
+                </div>
+            </section>
 
-            <div class="profile-card">
-                <div class="profile-header">
-                    <div class="profile-avatar">
-                        <div class="avatar">AS</div>
+            <!-- Quick Stats Section -->
+            <section class="quick-stats">
+                <div class="stat-card">
+                    <span class="stat-icon">📚</span>
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Project Completed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">⏱️</span>
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Months Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">💻</span>
+                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">Learning Progress</span>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="page-header">
+                    <h1>Apa yang Saya Kerjakan</h1>
+                    <p>Eksplorasi berbagai project dan teknologi yang sedang saya pelajari</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💻</div>
+                        <h3>Web Development</h3>
+                        <p>Membangun website modern dengan HTML, CSS, dan JavaScript. Fokus pada responsive design dan user experience.</p>
+                        <a href="latihan.html" class="feature-link">
+                            Lihat Project <span>→</span>
+                        </a>
                     </div>
-                    <div class="profile-info">
-                        <h2>Arya Saputra</h2>
-                        <p class="profile-title">Mahasiswa Teknik Informatika</p>
-                        <p class="profile-bio">Seorang mahasiswa yang sedang menekuni bidang web development dan programming. Saat ini aktif belajar HTML, CSS, JavaScript dan berbagai teknologi web modern.</p>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Mendesain interface yang menarik dan mudah digunakan. Memperhatikan detail dan konsistensi visual.</p>
+                        <a href="galery.html" class="feature-link">
+                            Lihat Gallery <span>→</span>
+                        </a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Learning Journey</h3>
+                        <p>Dokumentasi perjalanan belajar programming. Dari dasar hingga advanced concepts.</p>
+                        <a href="about.html" class="feature-link">
+                            Cerita Saya <span>→</span>
+                        </a>
                     </div>
                 </div>
+            </section>
 
-                <div class="profile-details">
-                    <div class="detail-section">
-                        <h3>Kontak & Media Sosial</h3>
-                        <div class="contact-list">
-                            <div class="contact-item">
-                                <span class="contact-icon">📧</span>
-                                <span>arya@example.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-icon">📱</span>
-                                <span>+62 812-3456-7890</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-icon">🐱</span>
-                                <span>github.com/aryasaputra</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="detail-section">
-                        <h3>Sedang Fokus Belajar</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Git</span>
-                            <span class="tech-tag">VS Code</span>
-                        </div>
-                    </div>
-
-                    <div class="detail-section">
-                        <h3>Target 2024</h3>
-                        <div class="target-list">
-                            <div class="target-item completed">
-                                <span class="target-icon">✅</span>
-                                <span>Menyelesaikan website portfolio</span>
-                            </div>
-                            <div class="target-item">
-                                <span class="target-icon">⏳</span>
-                                <span>Belajar framework CSS</span>
-                            </div>
-                            <div class="target-item">
-                                <span class="target-icon">⏳</span>
-                                <span>Menguasai JavaScript dasar</span>
-                            </div>
-                        </div>
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="cta-card">
+                    <h2>Mari Berkolaborasi!</h2>
+                    <p> Tertarik dengan project saya atau ingin berdiskusi tentang web development? Jangan ragu untuk menghubungi saya!</p>
+                    <div class="cta-actions">
+                        <a href="kontak.html" class="btn">📧 Email Saya</a>
+                        <a href="profil.html" class="btn">👨‍💻 Lihat Profil</a>
+                        <a href="latihan.html" class="btn">🚀 Project Saya</a>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
     <script src="script.js"></script>
+    <script>
+        // Initialize homepage when loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            addHomepageAnimations();
+            setupHomepage();
+        });
+    </script>
 </body>
 </html>

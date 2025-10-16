@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List dengan Multi Level - Diamond</title>
+    <style>
+        /* CSS untuk simbol Kotak Hitam */
+        .square-list {
+            list-style-type: square; 
+        }
+
+        /* Gaya Khusus untuk simbol Diamond Kosong (◇) */
+        .diamond-list {
+            /* Menghilangkan bullet standar agar bisa diganti dengan simbol Unicode */
+            list-style-type: none; 
+            padding-left: 0; /* Mereset padding bawaan UL */
+        }
+
+        .diamond-list li {
+            position: relative;
+            /* Memberi ruang untuk simbol dan menjaga indentasi */
+            padding-left: 1.5em; 
+        }
+
+        .diamond-list li::before {
+            /* Menggunakan karakter Unicode WHITE DIAMOND (◇) */
+            content: '◇'; 
+            position: absolute;
+            left: 0;
+            /* Penyesuaian agar simbol terlihat kecil dan sebaris */
+            font-size: 1.0em; 
+            top: 0;
+            line-height: 1.2; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Komponen yang membangun sistem komputer</h1>
+
+    <ol>
+        <li>
+            <strong>Hardware</strong>
+
+            <ol type="A">
+                <li>
+                    <strong>Input Device</strong>
+                    <ul class="square-list">
+                        <li>Mouse</li>
+                        <li>Keyboard</li>
+                        <li>Joystick</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Output Device</strong>
+                    <ol type="i">
+                        <li>Monitor</li>
+                        <li>Printer</li>
+                        <li>Speaker</li>
+                    </ol>
+                </li>
+
+                <li>
+                    <strong>Process</strong>
+                    <ul class="diamond-list">
+                        <li>Central Processing Unit</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+
+        <li>
+            <strong>Software</strong>
+            <ol type="a">
+                <li>
+                    <strong>Operating System</strong>
+                    <ul class="diamond-list">
+                        <li>Windows</li>
+                        <li>Unix</li>
+                        <li>Linux</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Programming Language</strong>
+                    <ul class="square-list">
+                        <li>Delphi</li>
+                        <li>Cobol</li>
+                        <li>RPG</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Utility Program</strong>
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+</body>
+</html>
