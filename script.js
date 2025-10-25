@@ -908,25 +908,3 @@ window.websiteApp = {
     handleContactFormSubmission,
     animateElements
 };
-
-function setupMobileNavbar() {
-    const toggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (!toggle || !navMenu) return;
-
-    toggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-
-    // Tutup menu setelah klik link
-    navMenu.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    setupMobileNavbar();
-});
