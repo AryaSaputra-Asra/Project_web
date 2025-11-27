@@ -1,0 +1,17 @@
+
+/* style.css - small customizations */
+body {
+  background: linear-gradient(180deg,#f8fbff 0%, #ffffff 100%);
+  color: #1f2937;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.navbar-brand { color: #0b5ed7 !important; }
+.card { border-radius: 12px; }
+.btn-primary {
+  background: linear-gradient(90deg,#6d5df6,#9b5cf6);
+  border: none;
+  box-shadow: 0 6px 18px rgba(103, 58, 183, 0.12);
+}
+.form-control.input-error { border-color: #e3342f; box-shadow: 0 0 0 .2rem rgba(227,52,47,0.08); }

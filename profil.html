@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Arya Saputra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Arya Saputra</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="profil.html" class="nav-link">Profil</a>
+                <a href="latihan.html" class="nav-link">Latihan</a>
+                <a href="galery.html" class="nav-link">Gallery</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="kontak.html" class="nav-link">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h1>Halo! <br>Saya <span class="text-primary">Arya Saputra</span></h1>
+                <p class="typing-container">
+                    <span class="typing-text">Mahasiswa Teknik Informatika & Web Developer</span>
+                </p>
+                <p>Passionate tentang web development, programming, dan menciptakan pengalaman digital yang menarik</p>
+                <div class="hero-actions">
+                    <a href="latihan.html" class="btn btn-primary">
+                        <span>🚀 Lihat Latihan</span>
+                    </a>
+                    <a href="kontak.html" class="btn btn-secondary">
+                        <span>💬 Hubungi Saya</span>
+                    </a>
+                    <a href="profil.html" class="btn btn-secondary">
+                        <span>👨‍💻 Profil Saya</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Quick Stats Section -->
+            <section class="quick-stats">
+                <div class="stat-card">
+                    <span class="stat-icon">📚</span>
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Project Completed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">⏱️</span>
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Months Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">💻</span>
+                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">Learning Progress</span>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="page-header">
+                    <h1>Apa yang Saya Kerjakan</h1>
+                    <p>Eksplorasi berbagai project dan teknologi yang sedang saya pelajari</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💻</div>
+                        <h3>Web Development</h3>
+                        <p>Membangun website modern dengan HTML, CSS, dan JavaScript. Fokus pada responsive design dan user experience.</p>
+                        <a href="latihan.html" class="feature-link">
+                            Lihat Project <span>→</span>
+                        </a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Mendesain interface yang menarik dan mudah digunakan. Memperhatikan detail dan konsistensi visual.</p>
+                        <a href="galery.html" class="feature-link">
+                            Lihat Gallery <span>→</span>
+                        </a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Learning Journey</h3>
+                        <p>Dokumentasi perjalanan belajar programming. Dari dasar hingga advanced concepts.</p>
+                        <a href="about.html" class="feature-link">
+                            Cerita Saya <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="cta-card">
+                    <h2>Mari Berkolaborasi!</h2>
+                    <p> Tertarik dengan project saya atau ingin berdiskusi tentang web development? Jangan ragu untuk menghubungi saya!</p>
+                    <div class="cta-actions">
+                        <a href="kontak.html" class="btn">📧 Email Saya</a>
+                        <a href="profil.html" class="btn">👨‍💻 Lihat Profil</a>
+                        <a href="latihan.html" class="btn">🚀 Project Saya</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize homepage when loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            addHomepageAnimations();
+            setupHomepage();
+        });
+    </script>
+</body>
+</html>
