@@ -1156,4 +1156,249 @@ profile-bio {
   }
 }
 
-/* end of file */
+/* ====== Project Gallery ====== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  background: var(--bg);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-strong);
+}
+
+.gallery-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  color: #333;
+}
+
+.gallery-item p {
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.gallery-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .75rem;
+}
+
+.gallery-tag {
+  background: rgba(102, 126, 234, 0.1);
+  color: var(--primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* tooltip overlay muncul pas hover */
+.gallery-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 0 0 14px 14px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== Spacing fix for Gallery note ====== */
+.gallery-note {
+  margin-top: 2.5rem; /* jarak tambahan dari atas */
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--accent);
+}
+
+.gallery-note h3 {
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.gallery-note p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ====== Project Gallery (improved spacing & layout) ====== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem; /* jarak bawah antara grid dan catatan */
+}
+
+.gallery-item {
+  background: var(--bg);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-left: 4px solid var(--accent);
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-strong);
+}
+
+/* image placeholder tetap simple & clean */
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 123, 255, 0.05);
+  border-bottom: 1px solid #eee;
+  padding: 2rem 1rem;
+  color: var(--muted);
+}
+
+.placeholder-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-content {
+  padding: 1.5rem;
+}
+
+.gallery-content h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.gallery-content p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* tech tags biar rapi */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tech-tag:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* catatan gallery */
+.info-card {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--accent);
+  margin-top: 2rem; /* ✨ jarak tambahan biar gak mepet ke atas */
+}
+
+.info-card h3 {
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+/* ====== Link & Button Cleanup ====== */
+
+/* Hilangkan underline di semua link */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Hover link tetap punya efek warna lembut */
+a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Untuk semua tombol/link bergaya button */
+a.btn,
+.btn,
+.cta-actions a,
+.cta-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tambahan agar tombol di CTA tetap rapi */
+.cta-actions a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pastikan warna teks tombol tidak ikut berubah pas hover */
+.btn-primary:hover,
+.btn-secondary:hover,
+.cta-actions a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/* animasi masuk halus */
+@keyframes galleryFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* end of file */ 

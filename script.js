@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ---------- Init & event delegation ---------- */
 function init(){
   initializeWebsite();
+  setupProjectGallery();
   setupGlobalListeners();
   setupStatusManagement();
   loadSavedStatus();
@@ -297,6 +298,40 @@ function setActiveNav(){
 }
 function animateElements(sel){ $$(sel).forEach((el,i)=>{ el.style.opacity='0'; el.style.transform='translateY(20px)'; setTimeout(()=>{ el.style.transition='all .6s ease'; el.style.opacity='1'; el.style.transform='translateY(0)'; }, i*200); }); }
 function debounce(fn, wait=100){ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a), wait); }; }
+
+/* ---------- Project Gallery Enhancements ---------- */
+function setupProjectGallery(){
+  const items = $$('.gallery-item');
+  if(!items.length) return;
+
+  // subtle floating animation
+  items.forEach((item,i)=>{
+    item.style.position = 'relative';
+    item.style.overflow = 'hidden';
+    item.style.transition = 'transform .3s ease, box-shadow .3s ease';
+    item.style.animation = `fadeInUp .6s ease ${i*0.1}s both`;
+  });
+
+  // tooltip-like detail on hover
+  on(document, 'mouseenter', '.gallery-item', (e, el)=>{
+    const detail = document.createElement('div');
+    detail.className = 'gallery-hover';
+    detail.textContent = el.getAttribute('data-detail') || 'Progress berlanjut...';
+    Object.assign(detail.style,{
+      position:'absolute',bottom:'10px',left:'10px',
+      background:'rgba(0,0,0,0.7)',color:'#fff',
+      padding:'6px 10px',borderRadius:'6px',fontSize:'0.85rem',
+      opacity:'0',transform:'translateY(10px)',transition:'all .3s ease'
+    });
+    el.appendChild(detail);
+    requestAnimationFrame(()=>{ detail.style.opacity='1'; detail.style.transform='translateY(0)'; });
+  });
+
+  on(document, 'mouseleave', '.gallery-item', (e, el)=>{
+    const d = el.querySelector('.gallery-hover');
+    if(d){ d.style.opacity='0'; d.style.transform='translateY(10px)'; setTimeout(()=>d.remove(),300); }
+  });
+}
 
 /* expose limited API for compatibility */
 window.websiteApp = { showNotification, validateContactForm, animateElements };
