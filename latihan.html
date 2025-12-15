@@ -1,265 +1,465 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan - Arya Saputra</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Latihan - Arya Saputra</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Arya Saputra</h2>
-            </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="profil.html" class="nav-link">Profil</a>
-                <a href="latihan.html" class="nav-link">Latihan</a>
-                <a href="galery.html" class="nav-link">Gallery</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="kontak.html" class="nav-link">Kontak</a>
-            </div>
-        </div>
-    </nav>
 
-    <main class="main">
-        <div class="container">
-            <div class="page-header">
-                <h1>Tugas Praktikum</h1>
-                <p>Kumpulan Modul dan tugas dari tiap pertemuan</p>
-            </div>
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<h2>Arya Saputra</h2>
+			</div>
+			<div class="nav-menu">
+				<a href="index.html" class="nav-link">Home</a>
+				<a href="profil.html" class="nav-link">Profil</a>
+				<a href="latihan.html" class="nav-link active">Latihan</a>
+				<a href="galery.html" class="nav-link">Gallery</a>
+				<a href="about.html" class="nav-link">About</a>
+				<a href="kontak.html" class="nav-link">Kontak</a>
+			</div>
+		</div>
+	</nav>
 
-            <section class="latihan-section">
-                <div class="latihan-grid">
-                    
-                    <!-- =========================================== -->
-                    <!-- CARA NAMBAH PERTEMUAN BARU: -->
-                    <!-- 1. Copy block code di bawah ini -->
-                    <!-- 2. Paste di sini -->
-                    <!-- 3. Ganti data sesuai pertemuan baru -->
-                    <!-- =========================================== -->
+	<main class="main">
+		<div class="container">
 
-                    <!-- PERTEMUAN 1 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 1</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Pengenalan HTML Dasar</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 1/Latihan Pertemuan 1.pdf" class="action-btn" target="_blank">
-                                    📄 PDF
-                                </a>
-                                <a href="latihan/pertemuan 1/modul/(Pemrograman Web 1) Pertemuan 1.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+			<div class="page-header">
+				<h1>Tugas & Latihan Praktikum</h1>
+				<p>Pemrograman Web I – Pertemuan 1 s/d 18</p>
+			</div>
 
-                    <!-- PERTEMUAN 2 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 2</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Basic Tag HTML</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 2/index(basic_tag_html).html" class="action-btn" target="_blank">
-                                    🌐 HTML
-                                </a>
-                                <a href="latihan/pertemuan 2/modul/(Pemrograman Web 1) Pertemuan 2.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+			<section class="latihan-section">
+				<div class="latihan-grid">
 
-                    <!-- PERTEMUAN 3 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 3</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Format Teks & Karakter Khusus</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 3/format_teks_dan_karakter_khusus(Relion).html" class="action-btn" target="_blank">
-                                    🌐 HTML
-                                </a>
-                                <a href="latihan/pertemuan 3/modul/(Pemrograman Web 1) Pertemuan 3.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- ================== PERTEMUAN 1 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 1</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Pengenalan HTML</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 1 — Pengenalan HTML"
+								data-desc="Tugas pengenalan HTML dasar."
+								data-items='[
+									{"label":"Tugas (PDF)","url":"latihan/pertemuan 1/Tugas Pertemuan 1.pdf"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-                    <!-- PERTEMUAN 4 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 4</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Multimedia (Gambar, Audio, Video)</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 4/latihan_multimedia.html" class="action-btn" target="_blank">
-                                    🌐 HTML
-                                </a>
-                                <a href="latihan/pertemuan 4/Jawaban_Latihan_Tugas_pertemuan 4.pdf" class="action-btn" target="_blank">
-                                    📄 PDF
-                                </a>
-                                <a href="latihan/pertemuan 4/modul/(Pemrograman Web 1) Pertemuan 4.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- ================== PERTEMUAN 2 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 2</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Basic Tag HTML</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 2 — Basic Tag HTML"
+								data-desc="Latihan dan tugas basic tag HTML."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 2/index(basic_tag_html).html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 2/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 2/Latihan/latihan2.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-                    <!-- PERTEMUAN 5 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 5</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Hyperlink</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 5/hyperlink.html" class="action-btn" target="_blank">
-                                    🌐 HTML
-                                </a>
-                                <a href="latihan/pertemuan 5/modul/(Pemrograman Web 1) Pertemuan 5.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- ================== PERTEMUAN 3 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 3</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Format Teks & Karakter Khusus</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 3 — Format Teks & Karakter Khusus"
+								data-desc="Latihan format teks dan karakter khusus."
+								data-items='[
+									{"label":"Latihan 1","url":"latihan/pertemuan 3/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 3/Latihan/latihan2.html"},
+									{"label":"Soal / Tugas","url":"latihan/pertemuan 3/format_teks_dan_karakter_khusus(Relion).html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-                    <!-- PERTEMUAN 6 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 6</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Bullet, Numbering & List</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 6/bullet_numbering_dan_list(komponen).html" class="action-btn" target="_blank">
-                                    🌐 HTML
-                                </a>
-                                <a href="latihan/pertemuan 6/modul/(Pemrograman Web 1) Pertemuan 6.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- ================== PERTEMUAN 4 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 4</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Multimedia HTML</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 4 — Multimedia HTML"
+								data-desc="Latihan multimedia HTML."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 4/latihan_multimedia.html"},
+									{"label":"Latihan A","url":"latihan/pertemuan 4/Latihan/a.htm"},
+									{"label":"Latihan B","url":"latihan/pertemuan 4/Latihan/b.htm"},
+									{"label":"Latihan C","url":"latihan/pertemuan 4/Latihan/c.htm"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-                    <!-- PERTEMUAN 7 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 7</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Table Wisata Indonesia</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 7/wisata_indonesia_(table).html" class="action-btn" target="_blank">
-                                    🌐 HTML
-                                </a>
-                                <a href="latihan/pertemuan 7/modul/(Pemrograman Web 1) Pertemuan 7.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- ================== PERTEMUAN 5 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 5</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Hyperlink</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 5 — Hyperlink"
+								data-desc="Latihan hyperlink HTML."
+								data-items='[
+                                    {"label":"Tugas","url":"index.html"},
+									{"label":"Latihan","url":"latihan/pertemuan 5/Latihan/latihan1.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-                    <!-- PERTEMUAN 8 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 8</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Form HTML</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 8/form.html" class="action-btn" target="_blank">
-                                    🌐 HTML
-                                </a>
-                                <a href="latihan/pertemuan 8/modul/(Pemrograman Web 1) Pertemuan 8.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- ================== PERTEMUAN 6 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 6</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>List & Numbering</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 6 — List & Numbering"
+								data-desc="Latihan list dan numbering."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 6/bullet_numbering_dan_list(komponen).html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 6/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 6/Latihan/latihan2.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-                    <!-- PERTEMUAN 9 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 9</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>Website Multi-halaman</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 9/index.html" class="action-btn" target="_blank">
-                                    🌐 Website
-                                </a>
-                                <a href="latihan/pertemuan 9/modul/(Pemrograman Web 1) Pertemuan 9.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+					<!-- ================== PERTEMUAN 7 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 7</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Tabel Wisata</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 7 — Tabel Wisata"
+								data-desc="Latihan tabel HTML."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 7/wisata_indonesia_(table).html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 7/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 7/Latihan/latihan2.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-                    <!-- PERTEMUAN 10 -->
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>Pertemuan 10</h3>
-                            <span class="status-badge completed">Selesai</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>IFRAME HTML</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan 10/IFRAME.html" class="action-btn" target="_blank">
-                                    🌐 HTML
-                                </a>
-                                <a href="latihan/pertemuan 10/Latihan Pertemuan 10.pdf" class="action-btn" target="_blank">
-                                    📄 JAWABAN PDF
-                                </a>
-                                <a href="latihan/pertemuan 10/modul/(Pemrograman Web 1) Pertemuan 10.pdf" class="action-btn" target="_blank">
-                                    📚 Modul
-                                </a>
-                            </div> 
-                        </div>
-                    </div>
-                    <!-- =========================================== -->
-                    <!-- TEMPLATE BUAT NAMBAH PERTEMUAN BARU: -->
-                    <!-- =========================================== -->
-                    <!--
-                    <div class="latihan-card">
-                        <div class="latihan-header">
-                            <h3>[EMOJI] Pertemuan [NO]</h3>
-                            <span class="status-badge [STATUS]">[TEKS STATUS]</span>
-                        </div>
-                        <div class="latihan-content">
-                            <p>[DESKRIPSI SINGKAT]</p>
-                            <div class="action-buttons">
-                                <a href="latihan/pertemuan [NO]/[NAMA_FILE]" class="action-btn" target="_blank">
-                                    [EMOJI] [TEKS BUTTON]
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    -->
+					<!-- ================== PERTEMUAN 8 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 8</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Form HTML</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 8 — Form HTML"
+								data-desc="Latihan form HTML."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 8/form.html"},
+									{"label":"Latihan","url":"latihan/pertemuan 8/Latihan/latihan1.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-                </div>
-            </section>
-        </div>
-    </main>
+					<!-- ================== PERTEMUAN 9 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 9</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Website Multi Halaman</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 9 — Website Multi Halaman"
+								data-desc="Latihan website multi halaman."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 9/index.html"},
+									{"label":"Latihan","url":"latihan/pertemuan 9/Latihan/index.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
 
-    <script src="script.js"></script>
+					<!-- ================== PERTEMUAN 10 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 10</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>IFRAME</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 10 — IFRAME"
+								data-desc="Latihan iframe HTML."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 10/IFRAME.html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 10/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 10/Latihan/latihan2.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+					<!-- ================== PERTEMUAN 11 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 11</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Image HTML</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 11 — Image HTML"
+								data-desc="Latihan image HTML."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 11/tugas1.html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 11/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 11/Latihan/latihan2.html"},
+									{"label":"Latihan 3","url":"latihan/pertemuan 11/Latihan/latihan3.html"},
+									{"label":"Latihan 4","url":"latihan/pertemuan 11/Latihan/latihan4.html"},
+									{"label":"Latihan 5","url":"latihan/pertemuan 11/Latihan/latihan5.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+					<!-- ================== PERTEMUAN 12 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 12</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>CSS Dasar</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 12 — CSS Dasar"
+								data-desc="Latihan CSS dasar."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 12/tugas.html"},
+									{"label":"Latihan","url":"latihan/pertemuan 12/Latihan/latihan1.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+					<!-- ================== PERTEMUAN 13 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 13</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>CSS Layout</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 13 — CSS Layout"
+								data-desc="Latihan layout CSS."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 13/tugas.html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 13/Latihan/lathan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 13/Latihan/latihan2.html"},
+									{"label":"Latihan 3","url":"latihan/pertemuan 13/Latihan/latihan3.html"},
+									{"label":"Latihan 4","url":"latihan/pertemuan 13/Latihan/latihan4.html"},
+									{"label":"Latihan 5","url":"latihan/pertemuan 13/Latihan/latihan5.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+					<!-- ================== PERTEMUAN 14 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 14</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Mini Project</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 14 — Mini Project"
+								data-desc="Mini project."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 14/tugas.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+					<!-- ================== PERTEMUAN 15 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 15</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Latihan Terstruktur</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 15 — Latihan Terstruktur"
+								data-desc="Latihan terstruktur."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 15/tugas.html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 15/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 15/Latihan/latihan2.html"},
+									{"label":"Latihan 3","url":"latihan/pertemuan 15/Latihan/latihan3.html"},
+									{"label":"Latihan 4","url":"latihan/pertemuan 15/Latihan/latihan4.html"},
+									{"label":"Latihan 5","url":"latihan/pertemuan 15/Latihan/latihan5.html"},
+									{"label":"Latihan 6","url":"latihan/pertemuan 15/Latihan/latihan6.html"},
+									{"label":"Latihan 7","url":"latihan/pertemuan 15/Latihan/latihan7.html"},
+									{"label":"Latihan 8","url":"latihan/pertemuan 15/Latihan/latihan8.html"},
+									{"label":"Latihan 9","url":"latihan/pertemuan 15/Latihan/latihan9.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+					<!-- ================== PERTEMUAN 16 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 16</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Dialog Box</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 16 — Dialog Box"
+								data-desc="Latihan dialog box JavaScript."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 16/tugas.html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 16/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 16/Latihan/lathan2.html"},
+									{"label":"Latihan 3","url":"latihan/pertemuan 16/Latihan/latihan3.html"},
+									{"label":"Latihan 4","url":"latihan/pertemuan 16/Latihan/latihan4.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+					<!-- ================== PERTEMUAN 17 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 17</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Evaluasi</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 17 — Evaluasi"
+								data-desc="Latihan evaluasi."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 17/tugas.html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 17/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 17/Latihan/latihan2.html"},
+									{"label":"Latihan 3","url":"latihan/pertemuan 17/Latihan/latihan3.html"},
+									{"label":"Latihan 4","url":"latihan/pertemuan 17/Latihan/latihan4.html"},
+									{"label":"Latihan 5","url":"latihan/pertemuan 17/Latihan/latihan5.html"},
+									{"label":"Latihan 6","url":"latihan/pertemuan 17/Latihan/latihan6.html"},
+									{"label":"Latihan 7","url":"latihan/pertemuan 17/Latihan/latihan7.html"},
+									{"label":"Latihan 8","url":"latihan/pertemuan 17/Latihan/latihan8.html"},
+									{"label":"Latihan 9","url":"latihan/pertemuan 17/Latihan/latihan9.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+					<!-- ================== PERTEMUAN 18 ================== -->
+					<div class="latihan-card">
+						<div class="latihan-header">
+							<h3>Pertemuan 18</h3>
+							<span class="status-badge completed">Selesai</span>
+						</div>
+						<div class="latihan-content">
+							<p>Final Practice</p>
+							<button class="action-btn open-modal"
+								data-title="Pertemuan 18 — Final Practice"
+								data-desc="Latihan akhir."
+								data-items='[
+									{"label":"Tugas","url":"latihan/pertemuan 18/tugas.html"},
+									{"label":"Latihan 1","url":"latihan/pertemuan 18/Latihan/latihan1.html"},
+									{"label":"Latihan 2","url":"latihan/pertemuan 18/Latihan/latihan2.html"},
+									{"label":"Latihan 3","url":"latihan/pertemuan 18/Latihan/latihan3.html"},
+									{"label":"Latihan 4","url":"latihan/pertemuan 18/Latihan/latihan4.html"},
+									{"label":"Latihan 5","url":"latihan/pertemuan 18/Latihan/latihan5.html"},
+									{"label":"Latihan 6","url":"latihan/pertemuan 18/Latihan/latihan6.html"},
+									{"label":"Latihan 7","url":"latihan/pertemuan 18/Latihan/latihan7.html"},
+									{"label":"Latihan 8","url":"latihan/pertemuan 18/Latihan/latihan8.html"}
+								]'>
+								Buka
+							</button>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<!-- MODAL -->
+<div class="modal-overlay" id="latihanModal">
+  <div class="modal-panel">
+
+    <div class="modal-header-actions">
+      <button class="btn-ghost modal-close">← Kembali ke Project</button>
+    </div>
+
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <div class="modal-list" id="modalList"></div>
+
+  </div>
+</div>
+
+
+	<script src="script.js"></script>
+</body>
+</html>
+
+
 </body>
 </html>

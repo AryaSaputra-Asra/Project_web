@@ -333,5 +333,101 @@ function setupProjectGallery(){
   });
 }
 
+/* ===================================================
+   LATIHAN MODAL — FINAL TERPADU
+   Safe • Additive • Optional ON
+   (ESC, backdrop, scroll lock)
+=================================================== */
+(function () {
+  // pakai helper yang sudah ada kalau ada
+  const $ = window.$ || (s => document.querySelector(s));
+  const on = window.on || function (el, ev, sel, fn) {
+    if (typeof sel === 'function') {
+      el.addEventListener(ev, sel);
+      return;
+    }
+    el.addEventListener(ev, e => {
+      const t = e.target.closest(sel);
+      if (t) fn(e, t);
+    });
+  };
+
+  // guard: hanya jalan di latihan.html
+  const modal = document.getElementById('latihanModal');
+  if (!modal) return;
+
+  const titleEl = document.getElementById('modalTitle');
+  const descEl  = document.getElementById('modalDesc');
+  const listEl  = document.getElementById('modalList');
+
+  let isOpen = false;
+
+  function lockScroll(lock) {
+    document.body.style.overflow = lock ? 'hidden' : '';
+  }
+
+  function buildList(items) {
+    listEl.innerHTML = '';
+    items.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'modal-item';
+      row.innerHTML = `
+        <span>${item.label}</span>
+        <a href="${item.url}" target="_blank" class="action-btn">
+          Buka (tab baru)
+        </a>
+      `;
+      listEl.appendChild(row);
+    });
+  }
+
+  function openModal(btn) {
+    try {
+      titleEl.textContent = btn.dataset.title || '';
+      descEl.textContent  = btn.dataset.desc || '';
+
+      const items = JSON.parse(btn.dataset.items || '[]');
+      buildList(items);
+
+      modal.classList.add('active');
+      lockScroll(true);
+      isOpen = true;
+    } catch (err) {
+      console.error('[Latihan Modal] error:', err);
+    }
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    lockScroll(false);
+    isOpen = false;
+  }
+
+  /* ================= EVENTS ================= */
+
+  // buka modal (event delegation)
+  on(document, 'click', '.open-modal', (e, btn) => {
+    openModal(btn);
+  });
+
+  // tutup via tombol close (X & "Kembali ke Project")
+  on(document, 'click', '.modal-close', () => {
+    closeModal();
+  });
+
+  // tutup via klik backdrop
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+
+  // tutup via ESC
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && isOpen) {
+      closeModal();
+    }
+  });
+})();
+
+
 /* expose limited API for compatibility */
 window.websiteApp = { showNotification, validateContactForm, animateElements };
