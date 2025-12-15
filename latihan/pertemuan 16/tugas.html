@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Operasi Aritmatika</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+}
+
+.container{
+    width:700px;
+    margin:40px auto;
+    background:white;
+    border:2px solid #999;
+    padding:20px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header .left{
+    font-size:28px;
+    font-weight:bold;
+    color:red;
+    text-shadow:2px 2px black;
+}
+
+.header .left span{
+    display:block;
+    font-size:20px;
+    color:blue;
+}
+
+.header .right{
+    color:red;
+    font-size:18px;
+}
+
+.form-area{
+    margin-top:40px;
+    text-align:center;
+}
+
+.form-area label{
+    color:red;
+    font-weight:bold;
+    margin:0 80px;
+}
+
+.calc{
+    margin-top:20px;
+}
+
+.calc input[type=text]{
+    width:120px;
+    padding:5px;
+    text-align:center;
+}
+
+.calc select{
+    height:100px;
+    vertical-align:middle;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:blue;
+    font-size:14px;
+}
+</style>
+
+<script>
+function hitung(){
+    var a = parseFloat(document.form1.a.value);
+    var b = parseFloat(document.form1.b.value);
+    var op = document.form1.op.value;
+    var hasil;
+
+    if(isNaN(a) || isNaN(b)){
+        alert("Nilai harus angka");
+        return;
+    }
+
+    if(op=="+") hasil = a+b;
+    else if(op=="-") hasil = a-b;
+    else if(op=="*") hasil = a*b;
+    else if(op=="/") hasil = a/b;
+
+    alert("Hasil = " + hasil);
+}
+</script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="left">
+            Kalkulator
+            <span>Sederhana</span>
+        </div>
+        <div class="right">Selamat Mencoba</div>
+    </div>
+
+    <div class="form-area">
+        <label>Nilai I</label>
+        <label>Nilai II</label>
+
+        <form name="form1" class="calc">
+            <input type="text" name="a">
+
+            <select name="op" size="4">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+
+            <input type="text" name="b">
+            <input type="button" value="submit" onclick="hitung()">
+        </form>
+    </div>
+
+    <div class="footer">
+        Created by Arya Saputra
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Menu Program JavaScript</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+// ===== FUNCTION KALKULATOR =====
+function kalkulator() {
+  var a = parseFloat(prompt("Masukkan Nilai I :", ""));
+  var b = parseFloat(prompt("Masukkan Nilai II :", ""));
+  var op = prompt("Pilih operator (+  -  *  /)", "+");
+
+  var hasil;
+
+  if (op == "+") hasil = a + b;
+  else if (op == "-") hasil = a - b;
+  else if (op == "*") hasil = a * b;
+  else if (op == "/") hasil = a / b;
+  else {
+    alert("Operator tidak valid");
+    return;
+  }
+
+  document.write("<h3>Hasil Kalkulator</h3>");
+  document.write(a + " " + op + " " + b + " = " + hasil);
+}
+
+// ===== FUNCTION LUAS TRAPESIUM =====
+function luasTrapesium() {
+  var atas = parseFloat(prompt("Masukkan garis atas (cm):", ""));
+  var bawah = parseFloat(prompt("Masukkan garis bawah (cm):", ""));
+  var tinggi = parseFloat(prompt("Masukkan tinggi (cm):", ""));
+
+  var luas = ((atas + bawah) * tinggi) / 2;
+
+  document.write("<h3>Menghitung Luas Trapesium</h3>");
+  document.write("Garis Atas : " + atas + " cm<br>");
+  document.write("Garis Bawah : " + bawah + " cm<br>");
+  document.write("Tinggi : " + tinggi + " cm<br>");
+  document.write("<b>Luas = " + luas + " cm<sup>2</sup></b>");
+}
+
+// ===== FUNCTION DERET BILANGAN =====
+function deretBilangan() {
+  var awal = parseInt(prompt("Masukkan Nilai Awal:", ""));
+  var akhir = parseInt(prompt("Masukkan Nilai Akhir:", ""));
+  var jumlah = 0;
+  var tampil = "";
+
+  for (var i = awal; i <= akhir; i++) {
+    tampil += i + " ";
+    jumlah += i;
+  }
+
+  document.write("<h3>Deret Bilangan</h3>");
+  document.write("Nilai Awal : " + awal + "<br>");
+  document.write("Nilai Akhir : " + akhir + "<br>");
+  document.write("Deret : " + tampil + "<br>");
+  document.write("Jumlah Deret : " + jumlah);
+}
+
+// ===== MENU UTAMA =====
+var pilih = prompt(
+  "Menu Pilihan\n" +
+  "1. Menghitung Kalkulator\n" +
+  "2. Menghitung Luas Trapesium\n" +
+  "3. Menghitung Deret\n\n" +
+  "Pilihan Anda (1 / 2 / 3) :"
+);
+
+if (pilih == "1") {
+  kalkulator();
+}
+else if (pilih == "2") {
+  luasTrapesium();
+}
+else if (pilih == "3") {
+  deretBilangan();
+}
+else {
+  alert("Pilihan tidak tersedia");
+}
+
+</script>
+
+</body>
+</html>

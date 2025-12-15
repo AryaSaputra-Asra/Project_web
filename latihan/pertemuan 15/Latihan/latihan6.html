@@ -1,0 +1,40 @@
+<!-- input type select -->
+ <html>
+<head>
+<title>Latihan Dengan Objek Select</title>
+<script language="JavaScript">
+function tekan() {
+    var jurusanstr = document.form.Jurusan.value;
+    document.form.Ojurusan.value = jurusanstr;
+}
+</script>
+</head>
+
+<body>
+<form name="form">
+<h1>Penggunaan Objek Select</h1>
+<hr>
+
+<h3>Masukan:</h3>
+Jurusan di UNPAM :
+<select name="Jurusan" size="1">
+    <option value="Teknik Informatika">Teknik Informatika</option>
+    <option value="Manajemen Informatika">Manajemen Informatika</option>
+    <option value="Teknik Komputer">Teknik Komputer</option>
+    <option value="Teknik Industri">Teknik Industri</option>
+    <option value="Teknik Elektro">Teknik Elektro</option>
+    <option value="Teknik Sipil">Teknik Sipil</option>
+    <option value="Teknik Arsitektur">Teknik Arsitektur</option>
+    <option value="Teknik Mesin">Teknik Mesin</option>
+</select>
+
+<br><br>
+<input type="button" value="kirim" onclick="tekan()">
+<input type="reset" value="ulang">
+
+<h3>Output</h3>
+<input type="text" name="Ojurusan" size="30">
+
+</form>
+</body>
+</html>

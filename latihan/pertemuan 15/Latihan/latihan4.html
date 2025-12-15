@@ -1,0 +1,40 @@
+<!-- form js input type text -->
+ <html>
+<head>
+<title>Latihan Dengan Objek Text</title>
+<script language="JavaScript">
+function tekan() {
+    var namastr = document.form.nama.value;
+    var alamatstr = document.form.alamat.value;
+
+    document.form.onama.value = namastr;
+    document.form.oalamat.value = alamatstr;
+
+    alert("lihat dulu");
+}
+</script>
+</head>
+
+<body>
+<form name="form">
+<h1>Memasukkan Data Dengan Objek Teks</h1>
+<hr>
+
+<pre>
+Nama Anda   : <input type="text" size="11" name="nama">
+Alamat     : <input type="text" size="25" name="alamat">
+</pre>
+
+<br>
+<input type="button" value="kirim" onclick="tekan()">
+<input type="reset" value="ulang">
+
+<h3>Output</h3>
+<pre>
+Jadi Nama Anda adalah : <input type="text" size="11" name="onama">
+Alamat Anda di        : <input type="text" size="25" name="oalamat">
+</pre>
+
+</form>
+</body>
+</html>

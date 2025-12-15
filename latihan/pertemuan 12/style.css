@@ -1,0 +1,24 @@
+body {
+    font-family: Arial;
+    background-color: #f0f8ff;
+    margin: 40px;
+}
+
+.judul {
+    color: navy;
+}
+
+.teks {
+    color: green;
+    font-size: 14pt;
+    text-align: justify;
+}
+
+.link {
+    color: red;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: blue;
+}

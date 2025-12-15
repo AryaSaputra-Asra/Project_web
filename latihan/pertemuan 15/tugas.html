@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Latihan JavaScript Lengkap</title>
+
+<script type="text/javascript">
+function prosesForm() {
+
+    // PROMPT
+    var nama = prompt("Masukkan nama Anda :", "");
+    if (nama == null || nama == "") {
+        alert("Nama tidak boleh kosong");
+        return;
+    }
+
+    // CONFIRM
+    var lanjut = confirm("Apakah data sudah benar?");
+    if (lanjut == false) {
+        alert("Silakan isi ulang data");
+        return;
+    }
+
+    // ALERT
+    alert("Terima kasih " + nama + ", data akan diproses");
+
+    // TAMPILKAN KE FORM
+    document.form1.txtNama.value = nama;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Form Input Data</h2>
+
+<form name="form1">
+Nama :
+<input type="text" name="txtNama"><br><br>
+
+<input type="button" value="Proses Data" onclick="prosesForm()">
+<input type="reset" value="Reset">
+</form>
+
+</body>
+</html>

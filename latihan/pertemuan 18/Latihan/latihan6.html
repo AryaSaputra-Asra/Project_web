@@ -1,0 +1,22 @@
+<html>
+<body onload="window.defaultStatus='selamat belajar java script'">
+<script>
+function konversi(F){
+  return 5/9 * (F - 32);
+}
+
+var F = [212, 32, -459.15];
+var C = [];
+var i;
+
+for(i = 0; i < F.length; i++){
+  C[i] = konversi(F[i]);
+}
+
+for(i = F.length-1; i >= 0; i--){
+  document.write("Value " + i + " was " + F[i] + " derajat Fahrenheit<br>");
+  document.write("which is " + C[i] + " derajat celsius<br><br>");
+}
+</script>
+</body>
+</html>

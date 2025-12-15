@@ -1,0 +1,34 @@
+<!-- prompt -->
+ <html>
+<head>
+    <title>Luas Persegi Panjang</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+    var nama = prompt("Masukkan nama Anda", "");
+    var panjang = prompt("Masukan panjang", "25");
+    var lebar = prompt("Masukan lebar", "");
+
+    // konversi ke angka
+    var luas = parseFloat(panjang) * parseFloat(lebar);
+
+    document.write("<font size='5' color='blue'>Luas Persegi Panjang</font><br>");
+    document.write("====================<br>");
+    document.write("Programmer = ", nama, "<br>");
+    document.write("Panjang = ", panjang, " cm <br>");
+    document.write("Lebar = ", lebar, " cm <br>");
+    document.write(
+        "Luas = ",
+        panjang,
+        " * ",
+        lebar,
+        " = ",
+        luas,
+        " cm <sup>2</sup><br>"
+    );
+</script>
+
+</body>
+</html>

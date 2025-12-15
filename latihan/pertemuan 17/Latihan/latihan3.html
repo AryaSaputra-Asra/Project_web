@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Penjualan Harga Barang</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var myName = prompt("Masukkan nama Anda", "Budi");
+var nb = prompt("Nama barang", "Mouse");
+var hs = prompt("Harga satuan", "85000");
+var jb = prompt("Jumlah barang", "15");
+
+hs = parseInt(hs);
+jb = parseInt(jb);
+
+var hb = hs * jb;
+var disc = 0;
+var ket = "";
+
+if (hb > 500000) {
+    disc = 5/100 * hb;
+    ket = "diskon 5%";
+} else if (hb > 300000) {
+    disc = 2/100 * hb;
+    ket = "diskon 2%";
+} else {
+    disc = 0.5/100 * hb;
+    ket = "diskon 0.5%";
+}
+
+var hbb = hb - disc;
+
+document.write("<font size='4' color='blue'>Penjualan Harga Barang</font><br>");
+document.write("<pre>");
+document.write("==============================\n");
+document.write("Nama barang        = " + nb + "\n");
+document.write("Harga satuan       = " + hs + "\n");
+document.write("Jumlah Barang      = " + jb + "\n");
+document.write("Harga Barang       = " + hb + "\n");
+document.write("Harga Discount     = " + disc + "\n");
+document.write("Keterangan         = " + ket + "\n");
+document.write("Harga Barang Bersih= " + hbb + "\n");
+document.write("==============================\n");
+document.write("</pre>");
+document.write("<font color='red'>Created by " + myName + "</font>");
+</script>
+
+</body>
+</html>

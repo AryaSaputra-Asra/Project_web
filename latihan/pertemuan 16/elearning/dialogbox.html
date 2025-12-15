@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan Form JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: inline-block;
+            width: 130px;
+            margin-bottom: 5px;
+        }
+        #output {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 50px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        // a. INPUT TYPE TEXT
+        function tampilText() {
+            const nama   = document.getElementById("txtNama").value;
+            const alamat = document.getElementById("txtAlamat").value;
+            
+            const out = `
+                <strong>Data Text</strong><br>
+                Nama   : ${nama || "-"}<br>
+                Alamat : ${alamat || "-"}
+            `;
+            document.getElementById("outputText").innerHTML = out;
+        }
+
+        // b. INPUT TYPE RADIO
+        function tampilRadio() {
+            const radios = document.getElementsByName("jk");
+            let gender = "-";
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    gender = radios[i].value;
+                    break;
+                }
+            }
+        
+            document.getElementById("outputRadio").innerHTML = `<strong>Data Radio</strong><br>Jenis Kelamin : ${gender}`;
+        }
+
+        // c. INPUT TYPE SELECT
+        function tampilSelect() {
+            const jurusan = document.getElementById("selJurusan").value;
+            document.getElementById("outputSelect").innerHTML = `<strong>Data Select</strong><br>Jurusan : ${jurusan || "-"}`;
+        }
+
+        // d. INPUT TYPE CHECKBOX
+        function tampilCheckbox() {
+            const cek = document.getElementsByName("hobi");
+            const hobi = [];
+            for (let i = 0; i < cek.length; i++) {
+                if (cek[i].checked) {
+                    hobi.push(cek[i].value);
+                }
+            }
+        
+            const teksHobi = hobi.length ? hobi.join(", ") : "-";
+            document.getElementById("outputCheckbox").innerHTML = `<strong>Data Checkbox</strong><br>Hobi : ${teksHobi}`;
+        }
+
+        // e. VALIDASI FORM (contoh mirip di modul)
+        function validasiForm() {
+            const nama = document.getElementById("txtNamaValidasi").value;
+            const usia = document.getElementById("txtUsia").value;
+        
+            if (nama === "" || usia === "") {
+                alert("Please complete all the form!");
+                if (nama === "") {
+                    document.getElementById("txtNamaValidasi").focus();
+                } else {
+                    document.getElementById("txtUsia").focus();
+                }
+                
+                return;
+            }
+        
+            // cek angka
+            const umurAngka = parseInt(usia, 10);
+            if (isNaN(umurAngka)) {
+                alert("Usia harus berupa angka!");
+                document.getElementById("txtUsia").focus();
+                return;
+            }
+        
+            alert("Thanks for completing the form " + nama);
+        
+            document.getElementById("outputValidasi").innerHTML = `
+                <strong>Hasil Validasi</strong><br>
+                Nama : ${nama}<br>
+                Usia : ${umurAngka} tahun
+            `;
+        }
+
+        // f. PENGGUNAAN EVENT DALAM JAVASCRIPT (onclick)
+        function tampilTanggal() {
+            document.getElementById("demoTanggal").innerHTML = Date();
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Latihan Form dalam JavaScript</h1>
+
+    <!-- a. Input type text -->
+    <fieldset>
+        <legend>a. Input Type Text</legend>
+        <label for="txtNama">Nama:</label>
+        <input type="text" id="txtNama" name="txtNama"><br>
+        <label for="txtAlamat">Alamat:</label>
+        <input type="text" id="txtAlamat" name="txtAlamat"><br><br>
+        <button type="button" onclick="tampilText()">Tampilkan</button>
+        
+        <div id="outputText" style="margin-top:10px;"></div>
+    </fieldset>
+
+    <!-- b. Input type radio -->
+    <fieldset>
+        <legend>b. Input Type Radio</legend>
+        <label>Jenis Kelamin:</label>
+        <input type="radio" name="jk" value="Wanita"> Wanita
+        <input type="radio" name="jk" value="Pria"> Pria
+        <br><br>
+        <button type="button" onclick="tampilRadio()">Tampilkan</button>
+
+        <div id="outputRadio" style="margin-top:10px;"></div>
+    </fieldset>
+
+    <!-- c. Input type select -->
+    <fieldset>
+        <legend>c. Input Type Select</legend>
+        <label for="selJurusan">Jurusan:</label>
+        <select id="selJurusan" name="selJurusan">
+            <option value="">-- Pilih Jurusan --</option>
+            <option value="TI - Teknik Informatika">TI - Teknik Informatika</option>
+            <option value="SI - Sistem Informasi">SI - Sistem Informasi</option>
+            <option value="MI - Manajemen Informatika">MI - Manajemen Informatika</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="tampilSelect()">Tampilkan</button>
+
+        <div id="outputSelect" style="margin-top:10px;"></div>
+    </fieldset>
+
+    <!-- d. Input type checkbox -->
+    <fieldset>
+        <legend>d. Input Type Checkbox</legend>
+        <label>Hobi:</label>
+        <input type="checkbox" name="hobi" value="Nonton Bola"> Nonton Bola
+        <input type="checkbox" name="hobi" value="Nonton TV"> Nonton TV
+        <input type="checkbox" name="hobi" value="Membaca"> Membaca
+        <br><br>
+        <button type="button" onclick="tampilCheckbox()">Tampilkan</button>
+
+        <div id="outputCheckbox" style="margin-top:10px;"></div>
+    </fieldset>
+
+    <!-- e. Validasi Form -->
+    <fieldset>
+        <legend>e. Validasi Form</legend>
+        <p>Enter the following details:</p>
+        <label for="txtNamaValidasi">Nama:</label>
+        <input type="text" id="txtNamaValidasi" name="txtNamaValidasi"><br>
+        <label for="txtUsia">Usia:</label>
+        <input type="text" id="txtUsia" name="txtUsia" maxlength="3"><br><br>
+        <button type="button" onclick="validasiForm()">Check Details</button>
+
+        <div id="outputValidasi" style="margin-top:10px;"></div>
+    </fieldset>
+
+    <!-- f. Event onclick -->
+    <fieldset>
+        <legend>f. Penggunaan Event (onclick)</legend>
+        <p>Klik tombol untuk menampilkan tanggal & waktu saat ini:</p>
+        <button type="button" onclick="tampilTanggal()">Tampilkan Tanggal</button>
+        <p id="demoTanggal" style="margin-top:10px;"></p>
+    </fieldset>
+
+    <h2>Ringkasan Output</h2>
+    <div id="output"></div>
+
+</body>
+</html>

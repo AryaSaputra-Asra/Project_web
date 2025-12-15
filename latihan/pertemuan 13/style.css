@@ -1,0 +1,49 @@
+body {
+    font-family: Arial;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    background: white;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

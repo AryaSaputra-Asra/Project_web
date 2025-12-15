@@ -1,0 +1,29 @@
+<html>
+<head>
+<script language="JavaScript">
+function radio_box(form){
+  var ket = "";
+
+  if(form.wanita.checked == true){
+    ket = "Wanita";
+  } else if(form.pria.checked == true){
+    ket = "Pria";
+  } else {
+    ket = "Gak Jelas";
+  }
+
+  alert("Anda adalah seorang " + ket);
+}
+</script>
+</head>
+<body>
+<form>
+<h1>Memasukkan Data Dengan Objek Radio</h1>
+<input type="radio" name="wanita"> Wanita
+<input type="radio" name="pria"> Pria
+<br><br>
+<input type="button" value="CONFIRM" onclick="radio_box(this.form)">
+<input type="reset" value="RESET">
+</form>
+</body>
+</html>
